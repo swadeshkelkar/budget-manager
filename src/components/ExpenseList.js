@@ -32,7 +32,7 @@ const ExpenseList = () => {
       <ul className="list-group mt-3 mb-3">
         {filteredExpenses.map((expense) => (
           <ExpenseItem
-            key={expense.id}
+            id={expense.id}
             name={expense.name}
             cost={expense.cost}
             date={expense.date}

@@ -25,7 +25,7 @@ const AddExpenseForm = (props) => {
     const expense = {
       id: uuidv4(),
       name,
-      cost: cost,
+      cost: parseInt(cost),
       date: dateFormatHandler(date),
     };
 

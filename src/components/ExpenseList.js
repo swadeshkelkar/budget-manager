@@ -6,7 +6,6 @@ const ExpenseList = () => {
   const { expenses } = useContext(AppContext);
 
   const [filteredExpenses, setfilteredExpenses] = useState(expenses || []);
-  console.log(filteredExpenses);
 
   useEffect(() => {
     setfilteredExpenses(expenses);
@@ -33,7 +32,7 @@ const ExpenseList = () => {
       <ul className="list-group mt-3 mb-3">
         {filteredExpenses.map((expense) => (
           <ExpenseItem
-            id={expense.id}
+            key={expense.id}
             name={expense.name}
             cost={expense.cost}
             date={expense.date}

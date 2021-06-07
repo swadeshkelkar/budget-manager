@@ -56,8 +56,6 @@ export const AppProvider = (props) => {
   useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state));
   }, [state]);
-
-  console.log(state);
   // 5. Returns our context. Pass in the values we want to expose
   return (
     <AppContext.Provider
